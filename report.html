@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report · Stranger Wall</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/report.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="logo" href="home.html">
+      <div class="logo-dot"></div>
+      Stranger Wall
+      <span class="nav-badge">beta</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="wall.html">Wall</a></li>
+      <li><a href="stranger.html">Strangers</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO BANNER -->
+  <div class="about-hero">
+    <img src="../assets/image/report-background.jpg" alt="" loading="eager">
+    <div class="about-hero-overlay"></div>
+    <div class="about-hero-content">
+      <h1><em>Report</em></h1>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="about-body">
+
+    <!-- Lead -->
+    <div class="lead-block reveal scale-in">
+      <p>Help keep Stranger Wall respectful and human. Use this form to report messages or behavior that violate our guidelines — no personal data required.</p>
+    </div>
+
+    <!-- Intro prose -->
+    <div class="prose reveal-group reveal">
+      <p class="reveal-child">All reports are reviewed by a human within <strong>24 hours</strong>. Since we don't collect personal data, we rely on exact message quotes to find and remove content. If action is taken, the message will be removed silently.</p>
+      <p class="reveal-child">False reports harm the community and waste the time of real moderators. Please only submit a report if you genuinely believe the content violates our <a href="terms.html" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(212,169,106,0.3);">community terms</a>.</p>
+    </div>
+
+    <div class="divider reveal"></div>
+
+    <!-- Report form -->
+    <div class="section-heading reveal from-left">
+      <h2>Submit a Report</h2>
+    </div>
+
+    <div class="form-wrap reveal scale-in">
+      <form id="reportForm" onsubmit="event.preventDefault(); handleSubmit();">
+
+        <div class="form-row">
+          <label class="form-label">Reason for report <span>choose one</span></label>
+          <select required>
+            <option value="" disabled selected>— select category —</option>
+            <option value="harassment">Harassment or hate speech</option>
+            <option value="personal">Sharing personal information</option>
+            <option value="violence">Threats or violence</option>
+            <option value="spam">Spam / advertising</option>
+            <option value="other">Other (describe below)</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label">Message content <span>exact text you're reporting</span></label>
+          <input type="text" placeholder="Paste the exact message here..." required>
+          <div class="helper">This helps us find it — we don't store IPs, so an exact quote is essential.</div>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label">Approximate time (UTC) <span>optional but helpful</span></label>
+          <input type="text" placeholder="e.g. 'around 14:30, march 12'">
+        </div>
+
+        <div class="form-row">
+          <label class="form-label">Additional context <span>optional</span></label>
+          <textarea placeholder="Why does this violate our guidelines? Any extra details..."></textarea>
+        </div>
+
+        <div class="check-row">
+          <input type="checkbox" id="c1" required>
+          <label for="c1"><strong>I am not reporting in bad faith.</strong> I understand that false reports harm the community.</label>
+        </div>
+
+        <div class="check-row">
+          <input type="checkbox" id="c2" required>
+          <label for="c2"><strong>I understand that due to anonymity,</strong> I may not receive a direct response, but the reported content will be reviewed.</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit report anonymously</button>
+
+        <div class="success-msg" id="successMsg">
+          ⚡ Report sent. Thank you for keeping the wall human.
+        </div>
+
+      </form>
+    </div>
+
+    <div class="divider reveal"></div>
+
+    <!-- Review process -->
+    <div class="section-heading reveal from-left">
+      <h2>How We Review</h2>
+    </div>
+    <div class="prose reveal-group reveal">
+      <p class="reveal-child">Every report is read by a real person, not an automated filter. We check the exact message you quoted, assess whether it violates the community terms, and remove it if it does — usually within 24 hours.</p>
+      <p class="reveal-child">Because Stranger Wall is built on anonymity, <strong>we cannot notify you of the outcome</strong>. We also cannot tell you who posted the message — we simply don't know. The removal happens quietly and permanently.</p>
+    </div>
+
+    <div class="footnote reveal">
+      Stranger Wall/teams
+    </div>
+
+  </div>
+
+  <script src="../assets/js/Report.js"></script>
+</body>
+</html>

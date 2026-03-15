@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Wall · Worldwide Chat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/wall.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- NAME MODAL -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <div class="modal-icon">🌍</div>
+      <h2>Join the Global Wall</h2>
+      <p>Pick a name and color. Your messages go to everyone, worldwide. No account needed.</p>
+      <input class="modal-input" id="name-input" placeholder="Your name (e.g. stranger_42)" maxlength="24">
+      <div class="color-row" id="color-row"></div>
+      <button id="join-btn" class="modal-submit">→ Enter the Wall</button>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="nav-left">
+      <div class="logo">
+        <div class="logo-dot"></div>
+        Global Wall
+      </div>
+    </div>
+    <div class="nav-center">
+      <div class="online-pill">
+        <div class="online-dot"></div>
+        <span id="online-count">1,247</span> online
+      </div>
+      <div class="msg-count-pill">
+        <span id="msg-count">0</span> messages
+      </div>
+    </div>
+    <div class="nav-right">
+      <button id="scroll-latest" class="nav-btn">↓ Latest</button>
+      <button id="clear-btn" class="nav-btn danger">✕ Clear</button>
+      <button id="home-btn" class="nav-btn">HOME</button>
+    </div>
+  </div>
+
+  <!-- WORLD TICKER -->
+  <div class="world-bar">
+    <span class="world-bar-label">🌐 Live from</span>
+    <div class="ticker-wrap">
+      <div class="ticker" id="ticker"></div>
+    </div>
+  </div>
+
+  <!-- MESSAGES -->
+  <div class="messages-wrap" id="messages-wrap">
+    <div id="messages">
+      <div class="empty-state" id="empty-state">
+        <div class="empty-icon">🌍</div>
+        <h3>The wall is waiting.</h3>
+        <p>Be the first to say something to the world.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- EMOJI BAR -->
+  <div class="emoji-bar" id="emoji-bar"></div>
+
+  <!-- INPUT -->
+  <div class="input-bar">
+    <div class="input-inner">
+      <button id="emoji-toggle" class="input-action" title="Emoji">😊</button>
+      <input id="msg-input" placeholder="Say something to the world…" maxlength="300" autocomplete="off">
+      <span class="char-left" id="char-left">300</span>
+      <button id="send-btn" class="send-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0c0d16" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- SCROLL BTN -->
+  <button class="scroll-btn" id="scroll-btn">↓</button>
+
+  <script src="../assets/js/wall.js" ></script>
+</body>
+</html>

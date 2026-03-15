@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stranger Chat · 1:1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/stranger.css">
+   <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+  <div class="nav">
+    <div class="logo">
+      <span class="logo-dot"></span>
+      <span>stranger.chat</span>
+    </div>
+    <div class="nav-center">
+      <div class="waiting-pill">
+        <div class="w-dot"></div>
+        <span id="waiting-count">2,841</span> waiting
+      </div>
+      <div class="chat-count-pill" id="chat-count-pill">Chat #<span id="chat-num">1</span></div>
+    </div>
+    <div class="nav-right">
+      <button class="nav-btn" id="nav-home-btn">← home</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════ WAITING SCREEN ══════════════════ -->
+  <div id="screen-waiting" class="screen active">
+    <div class="waiting-card">
+      <div class="waiting-icon">👤</div>
+      <h2>Talk to a <em>stranger.</em></h2>
+      <p>One-on-one anonymous chat. No accounts. No history. Just two strangers talking — until one skips.</p>
+
+      <div class="name-row">
+        <input class="name-input" id="my-name" placeholder="Your nickname (optional)" maxlength="20">
+      </div>
+
+      <div class="interest-row" id="interest-row">
+        <div class="interest-chip">💬 chat</div>
+        <div class="interest-chip">🎵 music</div>
+        <div class="interest-chip">🎮 gaming</div>
+        <div class="interest-chip">📚 books</div>
+        <div class="interest-chip">🌍 travel</div>
+        <div class="interest-chip">🎨 art</div>
+        <div class="interest-chip">💻 tech</div>
+        <div class="interest-chip">🎬 movies</div>
+      </div>
+
+      <!-- normal state -->
+      <div id="start-state">
+        <button class="start-btn" id="start-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          Find a Stranger
+        </button>
+      </div>
+
+      <!-- searching state -->
+      <div class="searching-state" id="searching-state">
+        <div class="search-ring"></div>
+        <p class="search-text" id="search-text">Looking for a stranger…</p>
+        <button class="cancel-search" id="cancel-search-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ CHAT SCREEN ══════════════════ -->
+  <div id="screen-chat" class="screen" style="position:relative;">
+
+    <!-- skip overlay (shown between chats) -->
+    <div class="skip-overlay" id="skip-overlay">
+      <div class="skip-ring"></div>
+      <div class="skip-overlay-text">Finding next stranger…</div>
+      <div class="skip-overlay-sub">Hang tight</div>
+    </div>
+
+    <!-- chat top bar -->
+    <div class="chat-bar">
+      <div class="stranger-info">
+        <div class="stranger-avatar" id="s-avatar">?</div>
+        <div class="stranger-name-wrap">
+          <div class="s-name" id="s-name">Stranger</div>
+          <div class="s-status"><div class="s-dot"></div>connected</div>
+        </div>
+      </div>
+      <div class="chat-bar-actions">
+        <span class="session-timer" id="session-timer">0:00</span>
+        <button class="skip-btn" id="skip-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M15 7l5 5-5 5"/>
+          </svg>
+          Skip →
+        </button>
+      </div>
+    </div>
+
+    <!-- messages -->
+    <div class="messages-wrap" id="messages-wrap">
+      <div id="messages"></div>
+    </div>
+
+    <!-- skip hint -->
+    <div class="skip-hint">Press <kbd>Esc</kbd> or click Skip to find next stranger</div>
+
+    <!-- input -->
+    <div class="input-bar">
+      <div class="input-inner">
+        <input id="chat-input" placeholder="Say something…" maxlength="300" autocomplete="off">
+        <button class="send-btn" id="send-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0b0c18" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ DISCONNECTED SCREEN ══════════════════ -->
+  <div id="screen-disc" class="screen">
+    <div class="disc-card">
+      <div class="disc-icon">👋</div>
+      <h3>Stranger disconnected</h3>
+      <p>They left the wall. It happens. The conversation was real while it lasted — now find a new one.</p>
+      <div class="disc-btns">
+        <button class="disc-btn-next" id="disc-next-btn">Next Stranger →</button>
+        <button class="disc-btn-home" id="disc-home-btn">Go Home</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/stranger.js" ></script>
+</body>
+</html>
