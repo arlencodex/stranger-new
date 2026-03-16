@@ -443,7 +443,7 @@ nav {
 }
 
 .footer-bottom-inner .footer-social {
-  position: absolute; left: 50%; transform: translateX(-50%) translateY(10px);
+  position: absolute; left: 50%; transform: translateX(-50%) translateY(2px);
 }
 
 .footer-social { display: flex; gap: 8px; align-items: center; }
