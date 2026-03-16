@@ -79,4 +79,5 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,13,22,0.88);backdrop-fi
 .reveal-group .reveal-child{
   opacity:1;
   transform:none;
-}
+.reveal{opacity:1 !important; transform:none !important;}
+.reveal-child{opacity:1 !important; transform:none !important;}
