@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact · Stranger Wall</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="home.html">
+      <div class="logo-dot"></div>
+      Stranger Wall
+      <span class="nav-badge">beta</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="wall.html">Wall</a></li>
+      <li><a href="stranger.html">Strangers</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="about-hero">
+    <img src="assets/image/contact-background.jpg" alt="Contact us" loading="eager">
+    <div class="about-hero-overlay"></div>
+    <div class="about-hero-content">
+      <h1>Contact <em>us</em></h1>
+    </div>
+  </div>
+
+  <div class="about-body">
+
+    <div class="lead-block reveal scale-in">
+      <p>We are committed to responding to every enquiry with care and clarity. Whether your matter is technical, legal, or personal — we will address it directly.</p>
+    </div>
+
+    <div class="prose reveal-group reveal">
+      <p class="reveal-child">Stranger Wall operates without a traditional support infrastructure by design. All enquiries are handled personally by our core team, ensuring that each message receives genuine attention rather than an automated response.</p>
+      <p class="reveal-child">We aim to respond to all correspondence within <strong>24 hours</strong>. For content removal requests, please provide the <strong>exact text of the message</strong> in question along with its approximate posting time in UTC — without IP logging, this is the only reliable method for us to locate and action specific content.</p>
+    </div>
+
+    <div class="divider reveal"></div>
+
+    <div class="section-heading reveal from-left">
+      <h2>Submit an Enquiry</h2>
+    </div>
+
+    <div class="form-wrap reveal scale-in">
+      <form id="contactForm" onsubmit="event.preventDefault(); handleSubmit();">
+
+        <div class="form-row">
+          <label class="form-label">Nature of enquiry <span>select the most relevant category</span></label>
+          <select required>
+            <option value="" disabled selected>— select category —</option>
+            <option value="general">General question or feedback</option>
+            <option value="removal">Content removal request</option>
+            <option value="privacy">Privacy or data subject request</option>
+            <option value="legal">Legal or compliance matter</option>
+            <option value="press">Press or media enquiry</option>
+            <option value="technical">Technical issue or bug report</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label">Message <span>required</span></label>
+          <textarea placeholder="Please describe your enquiry in detail. For removal requests, include the exact message text and approximate posting time (UTC)." required></textarea>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label">Contact email <span>optional — required only if you expect a response</span></label>
+          <input type="email" placeholder="your@email.com">
+          <div class="helper">Your email address will be used solely to respond to this enquiry and will not be retained or shared thereafter.</div>
+        </div>
+
+        <div class="check-row">
+          <input type="checkbox" id="c1" required>
+          <label for="c1"><strong>I acknowledge</strong> that due to the anonymous nature of this platform, certain requests may be subject to processing limitations and may take up to 24 hours to resolve.</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit enquiry</button>
+
+        <div class="success-msg" id="successMsg">
+          ✓ Your enquiry has been received. We will respond within 24 hours.
+        </div>
+
+      </form>
+    </div>
+
+    <div class="divider reveal"></div>
+
+    <div class="section-heading reveal from-left">
+      <h2>Response & Resolution</h2>
+    </div>
+    <div class="prose reveal-group reveal">
+      <p class="reveal-child">All submissions are reviewed directly by a member of the Stranger Wall team. If a reply email was provided, you will receive a personal response. Where no email is given, any necessary action will be taken silently and without public acknowledgment — consistent with the platform's principles.</p>
+      <p class="reveal-child">Content removal requests are actioned within <strong>24 hours</strong> of receipt, provided the exact message text is supplied. Privacy and legal matters are handled within 72 hours with a formal written response.</p>
+      <p class="reveal-child">Stranger Wall is an independent platform. There is no corporate layer between your message and the people responsible for this project. Every enquiry is treated with the seriousness and discretion it deserves.</p>
+    </div>
+
+    <div class="footnote reveal">
+      Stranger Wall / Team
+    </div>
+
+  </div>
+
+  <script src="assets/js/contact.js"></script>
+
+</body>
+</html>
