@@ -61,7 +61,17 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,13,22,0.88);backdrop-fi
 .simple-list li::before{content:'◇';color:var(--gold-dim);position:absolute;left:0;font-size:0.85rem;top:0.15rem;}
 .simple-list li strong{color:var(--gold-soft);font-weight:500;}
 
-.footnote{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dim);font-weight:500;opacity:0.6;}
+.footnote{
+  margin-top:4rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--border);
+  font-size:0.72rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--gold-soft);   
+  font-weight:500;
+  opacity:1;                
+}
 
 @keyframes fadeUp{
   from{
