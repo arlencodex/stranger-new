@@ -28,7 +28,6 @@ body::before {
   pointer-events: none; z-index: 0;
 }
 
-/* ══ NAV ══ */
 nav {
   position: sticky; top: 0; z-index: 100;
   background: rgba(12,13,22,0.88);
@@ -69,7 +68,6 @@ nav {
 .nav-links a:hover { color: var(--text); }
 .nav-links a.active { color: var(--gold); }
 
-/* ══ HERO BANNER ══ */
 .about-hero {
   position: relative; z-index: 1;
   height: 320px; overflow: hidden;
@@ -113,14 +111,12 @@ nav {
 
 .about-hero h1 em { font-style: normal; color: var(--gold); }
 
-/* ══ MAIN CONTENT ══ */
 .about-body {
   position: relative; z-index: 1;
   max-width: 860px; margin: 0 auto;
   padding: 4rem 3rem 6rem;
 }
 
-/* ══ SCROLL ANIMATIONS ══ */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -147,7 +143,6 @@ nav {
 .reveal-group.visible .reveal-child:nth-child(3) { opacity:1; transform:none; transition-delay: 0.2s; }
 .reveal-group.visible .reveal-child:nth-child(4) { opacity:1; transform:none; transition-delay: 0.3s; }
 
-/* ══ LEAD BLOCK ══ */
 .lead-block {
   border-left: 3px solid var(--gold);
   padding-left: 1.5rem;
@@ -166,7 +161,6 @@ nav {
   color: var(--text); letter-spacing: -0.2px;
 }
 
-/* ══ PROSE ══ */
 .prose {
   display: flex; flex-direction: column; gap: 1.4rem;
   margin-bottom: 3.5rem;
@@ -179,7 +173,6 @@ nav {
 
 .prose p strong { color: var(--gold-soft); font-weight: 500; }
 
-/* ══ SECTION HEADING ══ */
 .section-heading {
   display: flex; align-items: center; gap: 14px;
   margin: 3.5rem 0 1.6rem;
@@ -201,10 +194,8 @@ nav {
   content: ''; flex: 1; height: 1px; background: var(--border);
 }
 
-/* ══ DIVIDER ══ */
 .divider { height: 1px; background: var(--border); margin: 3rem 0; }
 
-/* ══ FORM ══ */
 .form-wrap {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -250,7 +241,7 @@ input:focus, select:focus, textarea:focus {
   box-shadow: 0 0 0 2px rgba(212,169,106,0.12);
 }
 
-textarea { resize: vertical; min-height: 130px; }
+textarea { resize: vertical; min-height: 140px; }
 
 select {
   appearance: none;
@@ -270,7 +261,6 @@ select {
 .check-row input[type="checkbox"] {
   width: 18px; height: 18px; flex-shrink: 0;
   margin-top: 0.2rem; accent-color: var(--gold);
-  border-radius: 4px;
 }
 
 .check-row label {
@@ -311,7 +301,6 @@ select {
   border-radius: 100px;
 }
 
-/* ══ FOOTNOTE ══ */
 .footnote {
   margin-top: 4rem; padding-top: 1.5rem;
   border-top: 1px solid var(--border);
@@ -319,13 +308,11 @@ select {
   color: var(--gold-dim); font-weight: 500; opacity: 0.6;
 }
 
-/* ══ ANIMATIONS ══ */
 @keyframes fadeUp {
   from { opacity:0; transform:translateY(14px); }
   to   { opacity:1; transform:translateY(0); }
 }
 
-/* ══ RESPONSIVE ══ */
 @media (max-width: 768px) {
   nav { padding: 0 1.5rem; }
   .nav-links { gap: 1.5rem; }
