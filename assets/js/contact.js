@@ -1,4 +1,3 @@
-// Intersection Observer for scroll-reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -10,19 +9,18 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Form submission handler
 function handleSubmit() {
-  const form = document.getElementById('reportForm');
+  const form = document.getElementById('contactForm');
   const selects = form.querySelectorAll('select[required]');
-  const inputs = form.querySelectorAll('input[required]');
+  const textareas = form.querySelectorAll('textarea[required]');
   const checkboxes = form.querySelectorAll('input[type="checkbox"][required]');
   let valid = true;
 
   selects.forEach(s => { if (!s.value) valid = false; });
-  inputs.forEach(i => { if (i.type !== 'checkbox' && !i.value.trim()) valid = false; });
+  textareas.forEach(t => { if (!t.value.trim()) valid = false; });
   checkboxes.forEach(c => { if (!c.checked) valid = false; });
 
-  if (!valid) { alert('Please fill all required fields.'); return; }
+  if (!valid) { alert('Please complete all required fields.'); return; }
 
   document.getElementById('successMsg').style.display = 'block';
   setTimeout(() => form.reset(), 300);
