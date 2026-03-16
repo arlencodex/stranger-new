@@ -63,7 +63,16 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,13,22,0.88);backdrop-fi
 
 .footnote{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dim);font-weight:500;opacity:0.6;}
 
-@keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(14px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
 
 @media(max-width:768px){nav{padding:0 1.5rem;}.nav-links{gap:1.5rem;}.about-hero{height:260px;}.about-hero-content{padding:0 1.5rem;bottom:2rem;}.about-body{padding:3rem 1.5rem 5rem;}}
 @media(max-width:520px){.nav-links{display:none;}.about-hero{height:220px;}.about-hero h1{font-size:2rem;}.about-body{padding:2.5rem 1.2rem 4rem;}.lead-block p{font-size:1.1rem;}}
