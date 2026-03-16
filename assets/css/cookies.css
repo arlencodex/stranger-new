@@ -76,3 +76,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,13,22,0.88);backdrop-fi
 
 @media(max-width:768px){nav{padding:0 1.5rem;}.nav-links{gap:1.5rem;}.about-hero{height:260px;}.about-hero-content{padding:0 1.5rem;bottom:2rem;}.about-body{padding:3rem 1.5rem 5rem;}}
 @media(max-width:520px){.nav-links{display:none;}.about-hero{height:220px;}.about-hero h1{font-size:2rem;}.about-body{padding:2.5rem 1.2rem 4rem;}.lead-block p{font-size:1.1rem;}}
+.reveal-group .reveal-child{
+  opacity:1;
+  transform:none;
+}
